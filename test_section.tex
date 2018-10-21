@@ -1,0 +1,76 @@
+\subsection{Steps to use Overleaf with Jupyter
+notebook}\label{steps-to-use-overleaf-with-jupyter-notebook}
+
+The steps were as follows:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  We created an article in Overleaf first
+\item
+  We then pushed the article to github
+\item
+  We visited github and copied the address of the article that we'd
+  clone
+\item
+  We then created a new git repository on our machine where we have
+  cloned the directory (in our case, we called that ``work'')
+\end{enumerate}
+
+Now,
+
+\begin{itemize}
+\tightlist
+\item
+  We have added a jupyter notebook
+\item
+  The jupyter notebook will let us add text using markdown documentation
+\item
+  We will continue to store our bibliography information on the
+  references.bib file in bibtex format
+\item
+  We will add citation information using
+  \texttt{\textbackslash{}cite\{citationid\}}
+\end{itemize}
+
+\subsection{Next Steps}\label{next-steps}
+
+We will convert this notebook to latex using two steps: In the first
+step, we will convert the notebook to a markdown file, using
+
+\texttt{jupyter\ nbconvert\ test\_section.ipynb} This will convert this
+notebook to markdown format. Then we will convert the test\_section.md
+to test\_section.tex using pandoc as
+
+\texttt{pandoce\ -f\ markdown\ -t\ latex\ -o\ test\_section.tex\ test\_section.md}
+
+We will then do some more things:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  We will create .gitignore file that will contain all files with
+  extension \texttt{*.ipynb} as git as problems in maintaining them.
+\item
+  Optionally, if we do not want to share our markdown files, we will add
+  \texttt{*.md} files to the list as well.
+\item
+  Lastly, and optionally, we can add the new \texttt{test\_section.tex}
+  file to the \texttt{main.tex} file using the
+  \texttt{\textbackslash{}input\{test\_section\}}
+\end{enumerate}
+
+After we have done these three changes, we will then push the files to
+the git repo using:
+
+\begin{verbatim}
+git pull origin master
+git add test_section.tex main.tex
+git commit -m "added test_section files"
+git push origin master
+\end{verbatim}
+
+Then, once we are in Overleaf, we will pull in the changes to Overleaf
+and work on Overleaf.
