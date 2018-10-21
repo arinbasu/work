@@ -12,7 +12,7 @@
 
 \maketitle
 
-\section{Introduction}
+\section*{Introduction}
 Overleaf is an excellent tool and works well for productive work. In this tutorial, I am going to use a low end machine running Arch Linux with pandoc and jupyter notebook and git installed. My goal will be to first create an article (this one) in Overleaf, with initial ideas of plans and data analyses, and then I will use github and git to work with the article by adding analyses to produce an article that will then get pushed to online repositories for publishing. This will demonstrate that a workflow is possible using only plain text integrating latex and markdown and other tools that are not resource heavy but can be used gainfully without the need for using resource intensive and non-free or non-open source tools for data analysis and writing fairly complex texts. 
 
 For this to work, we will use the following tools and processes:
@@ -32,6 +32,8 @@ For this to work, we will use the following tools and processes:
 
 With a workflow such as this, it is important to keep some processes separate. First, while overleaf can be a starter and finisher of the document, some processes need to be carefully reviewed such that a latex document created here does not necessarily play well in the jupyter notebook unless using git and pandoc one can faithfully translate the documents, so a caution might be useful. Also, while in jupyter using markdown, it is easy to insert citations, they are best avoided using the markdown syntax of [@citation\_id].
 
+\input{test_section}
+
 
 
 \begin{figure}[h!]
@@ -41,7 +43,7 @@ With a workflow such as this, it is important to keep some processes separate. F
 \label{fig:universe}
 \end{figure}
 
-\section{Conclusion}
+\section*{Conclusion}
 ``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
 
 \bibliographystyle{plain}
